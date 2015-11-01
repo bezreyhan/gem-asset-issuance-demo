@@ -27,8 +27,18 @@ module.exports = function(env) {
           test: /\.js$/,
           loader: 'babel-loader?stage=1',
           exclude: /node_modules/
+        },
+        {
+          test: /\.js$/,
+          loader: "eslint-loader",
+          exclude: /node_modules/
         }
       ]
+    },
+    eslint: {
+      configFile: './.eslintrc',
+      emitError: false,
+      emitWarning: false
     }
   }
 

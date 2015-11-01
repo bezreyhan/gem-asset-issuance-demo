@@ -1,19 +1,15 @@
-import './asyncModules'
-import exclaimify from './exclaimify'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import routes from './routes';
+import { Provider } from 'react-redux';
+import store from './store';
 
-const button = document.getElementById('button')
 
-const alertAsyncMessage = function() {
-  // CommonJS async syntax webpack magic
-  require.ensure([], function() {
-    const message = require("./asyncMessage")
-    alert(exclaimify(message))
-  })
-}
+ReactDOM.render(
+  <Provider store={store}>
+    {routes}
+  </Provider>,
+  document.getElementById('content')
+);
 
-console.log(`
-  asset references like this one:
-    images/gulp.png
-  get updated in js too!`)
 
-button.addEventListener('click', alertAsyncMessage)

@@ -2,7 +2,10 @@ var config = require('../config')
 var compact = require('lodash/array/compact')
 
 // Grouped by what can run in parallel
-var assetTasks = ['fonts', 'iconFont', 'images', 'svgSprite']
+
+// Some of these taks have been built but currently have no use.
+// Add them in if needed ['fonts', 'iconFont', 'svgSprite']
+var assetTasks = ['images']
 var codeTasks = ['html', 'css', 'js']
 
 module.exports = function(env) {
