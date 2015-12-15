@@ -5,7 +5,7 @@ var compact = require('lodash/array/compact')
 
 // Some of these taks have been built but currently have no use.
 // Add them in if needed ['fonts', 'iconFont', 'svgSprite']
-var assetTasks = ['images']
+var assetTasks = ['images', 'fonts']
 var codeTasks = ['html', 'css', 'js']
 
 module.exports = function(env) {

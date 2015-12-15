@@ -24,7 +24,7 @@ module.exports = function(env) {
     module: {
       loaders: [
         {
-          test: /\.js$/,
+          test: /\.jsx?$/,
           loader: 'babel',
           exclude: /node_modules/,
           query: {
@@ -32,7 +32,7 @@ module.exports = function(env) {
           }
         },
         {
-          test: /\.js$/,
+          test: /\.jsx?$/,
           loader: "eslint-loader",
           exclude: /node_modules/
         }

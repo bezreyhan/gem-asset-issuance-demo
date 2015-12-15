@@ -17,7 +17,7 @@
       "entries": {
         "app": ["./app.js"]
       },
-      "extensions": ["js"]
+      "extensions": ["js", "jsx"]
     },
 
     "css": {
